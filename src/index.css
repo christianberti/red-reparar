@@ -1,0 +1,32 @@
+:root {
+  --color-primary:        #300033;
+  --color-accent:         #F28924;
+  --color-nav-link:       #0F7840;
+  --color-nav-link-hover: #0a5c30;
+  --color-accent-hover:   #d4771e;
+  --color-bg:             #ffffff;
+  --color-text:           #300033;
+  --color-text-soft:      #6b5c6e;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
