@@ -1,4 +1,4 @@
-import WhatsappIcon from '../assets/WhatsApp.svg'
+import WhatsappIcon from '../assets/whatsapp.svg'
 import '../styles/WhatsAppButton.css'
 
 const WhatsAppButton = () => {
