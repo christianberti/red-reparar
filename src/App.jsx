@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import About from './components/sections/About'
 import Services from './components/sections/Services'
 import Contact from './components/sections/Contact'
-import WhatsappButton from './components/WhatsappButton'
+import WhatsappButton from './components/WhatsAppButton'
 import Footer from './components/Footer'
 
 const App = () => {
