@@ -116,3 +116,30 @@
 .contact__button:hover {
   opacity: 0.85;
 }
+
+
+@media (max-width: 900px) {
+  .contact__container {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .contact__form {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 3rem 1.5rem;
+  }
+
+  .contact__title {
+    font-size: 1.75rem;
+  }
+
+  .contact__form {
+    padding: 1.5rem;
+  }
+}
+
