@@ -39,3 +39,19 @@
   margin-bottom: 1rem;
   line-height: 1.7;
 }
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1.5rem;
+  }
+
+  .about__container {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .about__title {
+    font-size: 1.5rem;
+  }
+}
