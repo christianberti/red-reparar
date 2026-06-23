@@ -1,11 +1,12 @@
-import '../styles/Navbar.css'
-import logo from '../assets/red-reparar-logo.png'
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import "../styles/Navbar.css";
+import logo from "../assets/red-reparar-logo.png";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
+/* const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false) */
+const Navbar = ({ onDonar }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="header">
       <nav className="navbar">
@@ -18,20 +19,28 @@ const Navbar = () => {
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
-        <div className={`navbar__menu ${isOpen ? 'navbar__menu--open' : ''}`}>
+        <div className={`navbar__menu ${isOpen ? "navbar__menu--open" : ""}`}>
           <ul className="navbar__links">
-            <li><a href="#" className='inicio'>INICIO</a></li>
-            <li><a href="#nosotros">NOSOTROS</a></li>
-            <li><a href="#servicios">SERVICIOS</a></li>
-            <li><a href="#contacto">CONTACTO  </a></li>
+            <li>
+              <a href="#" className="inicio">
+                INICIO
+              </a>
+            </li>
+            {/* <li><a href="#nosotros">NOSOTROS</a></li> pense en quitar el nosotros porque esta en el inicio */}
+            <li>
+              <a href="#servicios">SERVICIOS</a>
+            </li>
+            <li>
+              <a href="#contacto">CONTACTO </a>
+            </li>
           </ul>
-          <button className="navbar__donate-button">
+          <button className="navbar__donate-button" onClick={onDonar}>
             DONAR
           </button>
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

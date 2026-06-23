@@ -11,11 +11,20 @@ import AcompanamientoIntegral from './components/sections/AcompanamientoIntegral
 
 const App = () => {
   const [view, setView] = useState('home') // 'home' | 'refugio'
-  const [scrollTarget, setScrollTarget] = useState(null) // 'hero' | 'acompanamiento'
+  const [scrollTarget, setScrollTarget] = useState(null) // 'hero' | 'acompanamiento' | 'contacto'
 
   const handleVerRefugio = (target) => {
     setView('refugio')
     setScrollTarget(target)
+  }
+
+  const handleDonar = () => {
+    if (view === 'refugio') {
+      setView('home')
+      setScrollTarget('contacto')
+    } else {
+      document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   // Vuelve a Inicio si se clickea cualquier link del Navbar
@@ -36,20 +45,43 @@ const App = () => {
           window.scrollTo({ top: 0, behavior: 'smooth' })
         } else if (scrollTarget === 'acompanamiento') {
           document.getElementById('acompanamiento-integral')?.scrollIntoView({ behavior: 'smooth' })
+        } else if (scrollTarget === 'contacto') {
+          document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })
         }
       }, 50)
     }
   }, [view, scrollTarget])
+  // Actualiza la URL (hash) cuando cambia la vista, para que el navegador
+  // guarde el cambio en su historial
+  useEffect(() => {
+    if (view === 'refugio') {
+      window.history.pushState({}, '', '#refugio')
+    } else {
+      window.history.pushState({}, '', '#inicio')
+    }
+  }, [view])
 
+  // Escucha el botón "Atrás"/"Adelante" del navegador
+  useEffect(() => {
+    const handlePopState = () => {
+      if (window.location.hash === '#refugio') {
+        setView('refugio')
+      } else {
+        setView('home')
+      }
+    }
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [])
   return (
     <>
-      <Navbar />
+      <Navbar onDonar={handleDonar} />
       <main>
         {view === 'home' ? (
           <>
             <About />
             <Services onVerRefugio={handleVerRefugio} />
-            <Contact />
+            {/* <Contact /> */}
           </>
         ) : (
           <>
@@ -58,6 +90,7 @@ const App = () => {
             <AcompanamientoIntegral />
           </>
         )}
+        <Contact />
       </main>
       <Footer />
       <WhatsappButton />
