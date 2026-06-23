@@ -1,0 +1,70 @@
+.refugio-hero {
+  padding: 5rem 2rem;
+  background-color: #fdf2f4;
+}
+
+.refugio-hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.refugio-hero__card {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+
+.refugio-hero__icon-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.refugio-hero__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.refugio-hero__text {
+  color: var(--color-text-soft);
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.refugio-hero__checklist {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.refugio-hero__checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: var(--color-text);
+  font-size: 0.95rem;
+}
+
+.refugio-hero__image {
+  flex: 1;
+}
+
+.refugio-hero__image img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .refugio-hero { padding: 3rem 1.5rem; }
+  .refugio-hero__container { flex-direction: column; gap: 2rem; }
+  .refugio-hero__card { padding: 1.75rem; }
+}
