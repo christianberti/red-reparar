@@ -11,7 +11,7 @@ const items = [
 
 function AcompanamientoIntegral() {
   return (
-    <section className="acompanamiento">
+    <section id="acompanamiento-integral" className="acompanamiento">
       <div className="acompanamiento__container">
         <div className="acompanamiento__image">
           <img src={imgAcompanamiento} alt="Acompañamiento integral Red Reparar" />

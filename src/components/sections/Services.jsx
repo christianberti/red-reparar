@@ -69,27 +69,27 @@ import { Home, BookText, HeartHandshake } from 'lucide-react'
 
 const getServices = (onVerRefugio) => [
   {
-    id: 1,
+      id: 1,
     icon: Home,
     title: 'Casa Refugio',
     description: 'Un hogar temporal seguro y digno para personas de la comunidad en situación de vulnerabilidad o desamparo.',
-    onClick: onVerRefugio,
+    onClick: () => onVerRefugio('hero'),
     linkText: 'Ver detalles'
   },
+{
+  id: 2,
+  icon: BookText,
+  title: 'Cursos de Oficio',
+  description: 'Formación en costura, zapatería, marroquinería y más. Sumamos nuevos talleres: consultá fechas y horarios disponibles.',
+  link: '#contacto',
+  linkText: 'Consultanos'
+},
   {
-    id: 2,
-    icon: BookText,
-    title: 'Cursos de Oficio',
-    description: 'Formación en costura, zapatería, moldería, gastronomía y mucho más.',
-    link: '#',
-    linkText: 'Ver cursos'
-  },
-  {
-    id: 3,
+   id: 3,
     icon: HeartHandshake,
     title: 'Acompañamiento',
     description: 'Asistencia legal, psicológica y social personalizada para garantizar el pleno ejercicio de tus derechos.',
-    onClick: onVerRefugio,
+    onClick: () => onVerRefugio('acompanamiento'),
     linkText: 'Solicitar turno'
   }
 ]
