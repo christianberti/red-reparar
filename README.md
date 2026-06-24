@@ -1,3 +1,29 @@
+# Red Reparar — Sitio Web Institucional
+
+Sitio web institucional de **Red Reparar**
+
+🔗 **Sitio en producción:** [red-reparar.vercel.app](https://red-reparar.vercel.app)
+
+## Sobre el proyecto
+
+El sitio comunica la misión institucional de la fundación y da acceso a:
+
+- Información sobre la organización ("Misión")
+- Programas: Casa Refugio, Cursos de Oficio y Acompañamiento Integral
+- Formulario de contacto
+- Botón de donación
+- Contacto directo por WhatsApp
+
+## Tecnologías
+
+- **React** (Vite)
+- **CSS** modular por componente
+- **lucide-react** para iconografía
+- Despliegue continuo en **Vercel**
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
