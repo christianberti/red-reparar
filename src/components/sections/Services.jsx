@@ -1,34 +1,34 @@
 import '../../styles/Services.css'
 import { Home, BookText, HeartHandshake } from 'lucide-react'
 
-const services = [
+const getServices = (onVerRefugio) => [
   {
-    id: 1,
+      id: 1,
     icon: Home,
     title: 'Casa Refugio',
     description: 'Un hogar temporal seguro y digno para personas de la comunidad en situación de vulnerabilidad o desamparo.',
-    link: '#',
+    onClick: () => onVerRefugio('hero'),
     linkText: 'Ver detalles'
   },
+{
+  id: 2,
+  icon: BookText,
+  title: 'Cursos de Oficio',
+  description: 'Formación en costura, zapatería, marroquinería y más. Sumamos nuevos talleres: consultá fechas y horarios disponibles.',
+  link: '#contacto',
+  linkText: 'Consultanos'
+},
   {
-    id: 2,
-    icon: BookText,
-    title: 'Cursos de Oficio',
-    description: 'Formación en costura, zapatería, moldería, gastronomía y mucho más.',
-    link: '#',
-    linkText: 'Ver cursos'
-  },
-  {
-    id: 3,
+   id: 3,
     icon: HeartHandshake,
     title: 'Acompañamiento',
     description: 'Asistencia legal, psicológica y social personalizada para garantizar el pleno ejercicio de tus derechos.',
-    link: '#',
+    onClick: () => onVerRefugio('acompanamiento'),
     linkText: 'Solicitar turno'
   }
 ]
 
-function Services() {
+function Services({ onVerRefugio }) {
   return (
     <section id="servicios" className="services">
       <div className="services__container">
@@ -42,16 +42,22 @@ function Services() {
         </div>
 
         <div className="services__grid">
-          {services.map(service => {
+          {getServices(onVerRefugio).map(service => {
             const Icon = service.icon;
             return (
             <div key={service.id} className="services__card">
               <Icon size={28} color="var(--color-primary)" />
               <h3 className="services__card-title">{service.title}</h3>
               <p className="services__card-description">{service.description}</p>
-              <a href={service.link} className="services__card-link">
-                {service.linkText} →
-              </a>
+              {service.onClick ? (
+                <button onClick={service.onClick} className="services__card-link">
+                  {service.linkText} →
+                </button>
+              ) : (
+                <a href={service.link} className="services__card-link">
+                  {service.linkText} →
+                </a>
+              )}
             </div>
             )})}
         </div>

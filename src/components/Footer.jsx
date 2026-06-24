@@ -1,4 +1,5 @@
-import { MapPin, Mail, Clock, Share2 } from 'lucide-react'
+/* import { MapPin, Mail, Clock, Share2 } from 'lucide-react' */
+import { MapPin, Mail, Clock } from 'lucide-react'
 import '../styles/Footer.css'
 
 const Footer = () => {
