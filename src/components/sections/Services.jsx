@@ -7,7 +7,7 @@ const getServices = (onVerRefugio) => [
     icon: Home,
     title: 'Casa Refugio',
     description: 'Un hogar temporal seguro y digno para personas de la comunidad en situación de vulnerabilidad o desamparo.',
-    onClick: () => onVerRefugio('hero'),
+    onClick: () => onVerRefugio('refugio-hero'),
     linkText: 'Ver detalles'
   },
 {
@@ -23,7 +23,7 @@ const getServices = (onVerRefugio) => [
     icon: HeartHandshake,
     title: 'Acompañamiento',
     description: 'Asistencia legal, psicológica y social personalizada para garantizar el pleno ejercicio de tus derechos.',
-    onClick: () => onVerRefugio('acompanamiento'),
+    onClick: () => onVerRefugio('acompanamiento-integral'),
     linkText: 'Solicitar turno'
   }
 ]

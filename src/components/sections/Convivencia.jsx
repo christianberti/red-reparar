@@ -1,12 +1,12 @@
 import '../../styles/Convivencia.css'
-import { Users, CalendarCheck, Sprout, ShieldCheck } from 'lucide-react'
+import { Users, HeartHandshake, Stethoscope, GraduationCap } from 'lucide-react'
 import imgConvivencia from '../../assets/convivencia-illustration.png'
 
 const cards = [
-  { id: 1, icon: Users, title: 'Apoyo Mutuo', description: 'Fomentamos redes de solidaridad donde cada integrante aporta y recibe acompañamiento emocional.' },
-  { id: 2, icon: CalendarCheck, title: 'Actividades Grupales', description: 'Talleres, cine-foros y cenas compartidas que fortalecen el tejido comunitario y la identidad.' },
-  { id: 3, icon: Sprout, title: 'Cuidado Colectivo', description: 'Responsabilidades compartidas en el mantenimiento del hogar, enseñando autonomía y colaboración.' },
-  { id: 4, icon: ShieldCheck, title: 'Espacios Seguros', description: 'Círculos de palabra y mediación de conflictos liderados por profesionales especializados.' }
+  { id: 1, icon: Users, title: 'Vida en Comunidad', description: 'Las chicas conviven bajo el mismo techo las 24 horas, compartiendo la vivienda de manera comunitaria, como una verdadera familia.' },
+  { id: 2, icon: HeartHandshake, title: 'Contención desde el Amor', description: 'Nuestro trabajo se sostiene desde el amor, la contención y un fuerte compromiso social, antes que desde el asistencialismo.' },
+  { id: 3, icon: Stethoscope, title: 'Acompañamiento Profesional', description: 'Contamos con psicóloga y psicóloga social, en articulación directa con el centro de salud del barrio para la atención en salud mental y clínica.' },
+  { id: 4, icon: GraduationCap, title: 'Vinculación Educativa', description: 'Acompañamos a cada chica a comenzar, retomar o terminar sus estudios —primarios, secundarios o terciarios— como parte del camino hacia su autonomía.' }
 ]
 
 function Convivencia() {

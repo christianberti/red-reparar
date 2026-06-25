@@ -11,7 +11,7 @@ const checklist = [
 
 function RefugioHero() {
   return (
-    <section className="refugio-hero">
+    <section id="refugio-hero" className="refugio-hero">
       <div className="refugio-hero__container">
         <div className="refugio-hero__card">
           <div className="refugio-hero__icon-title">
