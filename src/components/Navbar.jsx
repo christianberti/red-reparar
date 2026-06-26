@@ -3,8 +3,6 @@ import logo from "../assets/red-reparar-logo.png";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-/* const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false) */
 const Navbar = ({ onDonar }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -15,8 +13,13 @@ const Navbar = ({ onDonar }) => {
           RED REPARAR
         </a>
 
-        <button className="navbar__toggle" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        <button
+          className="navbar__toggle"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={isOpen}
+        >
+          {isOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
         </button>
 
         <div className={`navbar__menu ${isOpen ? "navbar__menu--open" : ""}`}>
@@ -26,7 +29,6 @@ const Navbar = ({ onDonar }) => {
                 INICIO
               </a>
             </li>
-            {/* <li><a href="#nosotros">NOSOTROS</a></li> pense en quitar el nosotros porque esta en el inicio */}
             <li>
               <a href="#servicios">SERVICIOS</a>
             </li>
