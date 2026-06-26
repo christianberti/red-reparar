@@ -5,6 +5,16 @@ import { Menu, X } from "lucide-react";
 
 const Navbar = ({ onDonar }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
+  const handleDonarClick = () => {
+    setIsOpen(false);
+    onDonar();
+  };
+
   return (
     <header className="header">
       <nav className="navbar">
@@ -25,18 +35,18 @@ const Navbar = ({ onDonar }) => {
         <div className={`navbar__menu ${isOpen ? "navbar__menu--open" : ""}`}>
           <ul className="navbar__links">
             <li>
-              <a href="#" className="inicio">
+              <a href="#" className="inicio" onClick={handleLinkClick}>
                 INICIO
               </a>
             </li>
             <li>
-              <a href="#servicios">SERVICIOS</a>
+              <a href="#servicios" onClick={handleLinkClick}>SERVICIOS</a>
             </li>
             <li>
-              <a href="#contacto">CONTACTO </a>
+              <a href="#contacto" onClick={handleLinkClick}>CONTACTO </a>
             </li>
           </ul>
-          <button className="navbar__donate-button" onClick={onDonar}>
+          <button className="navbar__donate-button" onClick={handleDonarClick}>
             DONAR
           </button>
         </div>
