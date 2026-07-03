@@ -5,11 +5,10 @@ const Hero = ({ onConocenos }) => {
     <section id="inicio" className="hero">
       <div className="hero__container">
         <h1 className="hero__title">
-          Casa Refugio para Mujeres Trans y Travestis en Rosario
+          Asociación Civil, Inclusiva y Diversa "RED REPARAR"
         </h1>
         <p className="hero__subtitle">
-          La única casa de protección trans y travesti de la República Argentina,
-          construida desde el amor.
+          Casa Refugio para Mujeres Trans
         </p>
         <button className="hero__cta" onClick={onConocenos}>
           Conocé nuestra labor
