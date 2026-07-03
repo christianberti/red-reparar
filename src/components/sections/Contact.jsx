@@ -31,14 +31,14 @@ function Contact() {
               <span className="contact__detail-icon"><Mail size={20} color="var(--color-primary)" /></span>
               <div>
                 <strong>Correo</strong>
-                <p>contacto@redreparar.org</p>
+                <p>redrepararid@gmail.com</p>
               </div>
             </li>
             <li className="contact__detail">
               <span className="contact__detail-icon"><Phone size={20} color="var(--color-primary)" /></span>
               <div>
                 <strong>WhatsApp</strong>
-                <p>+54 341 000-0000</p>
+                <p>+54 341 500 4542</p>
               </div>
             </li>
           </ul>

@@ -24,7 +24,7 @@ const getServices = (onVerRefugio) => [
     title: 'Acompañamiento',
     description: 'Asistencia legal, psicológica y social personalizada para garantizar el pleno ejercicio de tus derechos.',
     onClick: () => onVerRefugio('acompanamiento-integral'),
-    linkText: 'Solicitar turno'
+    linkText: 'Saber más'
   }
 ]
 

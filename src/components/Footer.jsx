@@ -41,7 +41,7 @@ const Footer = () => {
             </li>
             <li>
               <Mail size={16} />
-              <span>info@redreparar.org.ar</span>
+              <span>redrepararid@gmail.com</span>
             </li>
             <li>
               <Clock size={16} />
