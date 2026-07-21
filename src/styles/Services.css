@@ -1,6 +1,6 @@
 .services {
   padding: 5rem 2rem;
-  background-color: #F5941F;
+  background-color: var(--color-services-bg); /* CAMBIO: antes #F5941F */
 }
 
 .services__container {
@@ -35,7 +35,7 @@
 }
 
 .services__card {
-  background-color: #ffffff;
+  background-color: var(--color-surface); /* CAMBIO: antes #ffffff */
   border-radius: 10px;
   padding: 2rem;
   display: flex;
@@ -60,20 +60,6 @@
   flex: 1;
 }
 
-/* .services__card-link {
-  color: var(--color-accent);
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-decoration: none;
-  margin-top: 0.5rem;
-  transition: color 0.2s;
-}
-
-.services__card-link:hover {
-  color: var(--color-accent-hover);
-} */
-
-
 .services__card-link {
   display: inline-block;
   background: none;
@@ -94,7 +80,6 @@
   text-decoration: underline;
 }
 
-/* Foco visible solo cuando se navega con teclado (Tab) —  accesibilidad */
 .services__card-link:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 3px;

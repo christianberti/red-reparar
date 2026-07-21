@@ -30,10 +30,10 @@
   font-weight: 500;
   transition: color 0.2s;
   font-size: 1.3rem;
-    padding: 10px;
+  padding: 10px;
 }
 
-.navbar__links .inicio{
+.navbar__links .inicio {
   color: var(--color-accent);
 }
 
@@ -47,7 +47,7 @@
 }
 
 .navbar__logo {
-  display: flex;        
+  display: flex;
   align-items: center;
   gap: 0.75rem;
   font-size: 1.3rem;
@@ -58,11 +58,11 @@
 
 
 .navbar__logo img {
-  height: 60px;         
+  height: 60px;
   width: auto;
 }
 
-.navbar__donate-button{
+.navbar__donate-button {
   background-color: var(--color-accent);
   border-style: none;
   padding: 16px;
@@ -72,7 +72,7 @@
   font-weight: 500;
 }
 
-.navbar__donate-button:hover{
+.navbar__donate-button:hover {
   background-color: var(--color-accent-hover);
 }
 
@@ -83,6 +83,30 @@
   border: none;
   cursor: pointer;
   color: var(--color-primary);
+}
+
+
+.navbar__contrast-toggle {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 10px 16px;
+  border-radius: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar__contrast-toggle:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+.navbar__contrast-toggle[aria-pressed="true"] {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
 }
 
 @media (max-width: 768px) {
@@ -119,8 +143,9 @@
     width: 100%;
   }
 
-  .navbar__donate-button {
+  .navbar__contrast-toggle {
     margin-left: 0;
     width: 100%;
   }
+
 }
