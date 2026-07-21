@@ -7,6 +7,42 @@
   --color-bg:             #ffffff;
   --color-text:           #300033;
   --color-text-soft:      #6b5c6e;
+
+
+ --color-surface:      #ffffff;   /* cards, footer, formulario de contacto */
+  --color-section-alt:  #f0ecf0;   /* fondo lavanda: sección Contacto + hover del navbar */
+  --color-services-bg:  #F5941F;   /* fondo de la sección Servicios */
+  --color-refugio-bg:   #fdf2f4;   /* fondo de la sección Refugio */
+  --color-highlight-bg: #F28924;   /* fondo de la sección Convivencia (hoy usa var(--color-accent) directo, lo separamos) */
+}
+
+body.high-contrast {
+  --color-primary:        #ffffff;
+  --color-accent:         #ffff00;
+  --color-nav-link:       #ffff00;
+  --color-nav-link-hover: #ffffff;
+  --color-accent-hover:   #ffffff;
+  --color-bg:             #000000;
+  --color-text:           #ffffff;
+  --color-text-soft:      #ffffff;
+  --color-surface:        #000000;
+  --color-section-alt:    #000000;
+  --color-services-bg:    #000000;
+  --color-refugio-bg:     #000000;
+  --color-highlight-bg:   #000000;
+}
+
+body.high-contrast *,
+body.high-contrast *::before,
+body.high-contrast *::after {
+  border-color: #ffffff;
+}
+
+body.high-contrast .services__card,
+body.high-contrast .refugio-hero__card,
+body.high-contrast .convivencia__card,
+body.high-contrast .contact__form {
+  border: 2px solid #ffffff;
 }
 
 *, *::before, *::after {

@@ -14,13 +14,10 @@ const App = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
-  const handleDonar = () => {
-    handleScrollTo('contacto')
-  }
 
   return (
     <>
-      <Navbar onDonar={handleDonar} />
+      <Navbar/>
       <main>
         <Hero onConocenos={() => handleScrollTo('nosotros')} />
         <About />

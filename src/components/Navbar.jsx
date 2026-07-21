@@ -1,18 +1,25 @@
 import "../styles/Navbar.css";
 import logo from "../assets/red-reparar-logo.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
-const Navbar = ({ onDonar }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const [highContrast, setHighContrast] = useState(
+    () => localStorage.getItem("highContrast") === "true",
+  );
+  useEffect(() => {
+    document.body.classList.toggle("high-contrast", highContrast);
+    localStorage.setItem("highContrast", highContrast);
+  }, [highContrast]);
 
   const handleLinkClick = () => {
     setIsOpen(false);
   };
 
-  const handleDonarClick = () => {
-    setIsOpen(false);
-    onDonar();
+  const handleContrastToggle = () => {
+    setHighContrast((prev) => !prev);
   };
 
   return (
@@ -29,7 +36,11 @@ const Navbar = ({ onDonar }) => {
           aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={isOpen}
         >
-          {isOpen ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
+          {isOpen ? (
+            <X size={28} aria-hidden="true" />
+          ) : (
+            <Menu size={28} aria-hidden="true" />
+          )}
         </button>
 
         <div className={`navbar__menu ${isOpen ? "navbar__menu--open" : ""}`}>
@@ -40,14 +51,22 @@ const Navbar = ({ onDonar }) => {
               </a>
             </li>
             <li>
-              <a href="#servicios" onClick={handleLinkClick}>SERVICIOS</a>
+              <a href="#servicios" onClick={handleLinkClick}>
+                SERVICIOS
+              </a>
             </li>
             <li>
-              <a href="#contacto" onClick={handleLinkClick}>CONTACTO </a>
+              <a href="#contacto" onClick={handleLinkClick}>
+                CONTACTO{" "}
+              </a>
             </li>
           </ul>
-          <button className="navbar__donate-button" onClick={handleDonarClick}>
-            DONAR
+          <button
+            className="navbar__contrast-toggle"
+            onClick={handleContrastToggle}
+            aria-pressed={highContrast}
+          >
+            Alto contraste
           </button>
         </div>
       </nav>
