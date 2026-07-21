@@ -45,20 +45,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
-        <div className="footer__col">
-          <h4 className="footer__col-title">BOLETÍN INFORMATIVO</h4>
-          <p className="footer__newsletter-text">
-            Recibí nuestras novedades.
-          </p>
-          <div className="footer__newsletter">
-            <input type="email" placeholder="Tu email" />
-            <button type="button" aria-label="Suscribirse">
-              →
-            </button>
-          </div>
         </div>
-      </div>
 
       <div className="footer__bottom">
         <p>© 2026 Red Reparar · Casa Refugio Trans</p>
