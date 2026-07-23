@@ -45,6 +45,12 @@ body.high-contrast .contact__form {
   border: 2px solid #ffffff;
 }
 
+body.high-contrast .navbar__links a:hover,
+body.high-contrast .navbar__links .inicio:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;

@@ -1,6 +1,6 @@
 .convivencia {
   padding: 5rem 2rem;
-  background-color: var(--color-accent);
+  background-color: var(--color-highlight-bg);
 }
 
 .convivencia__container { max-width: 1200px; margin: 0 auto; }
@@ -25,7 +25,7 @@
 }
 
 .convivencia__card {
-  background-color: #ffffff;
+  background-color: var(--color-surface);
   border-radius: 12px;
   padding: 1.75rem;
   display: flex;
