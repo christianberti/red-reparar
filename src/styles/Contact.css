@@ -1,6 +1,6 @@
 .contact {
   padding: 5rem 2rem;
-  background-color: #f0ecf0;
+  background-color: var(--color-section-alt);
 }
 
 .contact__container {
@@ -57,7 +57,7 @@
 }
 
 .contact__form {
-  background-color: #ffffff;
+  background-color: var(--color-surface);
   border-radius: 12px;
   padding: 2.5rem;
   display: flex;
@@ -101,7 +101,7 @@
 
 .contact__button {
   background-color: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-bg);
   border: none;
   border-radius: 8px;
   padding: 1rem;
