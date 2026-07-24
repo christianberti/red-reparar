@@ -20,6 +20,7 @@ const Navbar = () => {
 
   const handleContrastToggle = () => {
     setHighContrast((prev) => !prev);
+    setIsOpen(false);
   };
 
   return (
