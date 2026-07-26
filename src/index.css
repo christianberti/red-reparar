@@ -1,35 +1,35 @@
 :root {
-  --color-primary:        #300033;
-  --color-accent:         #F28924;
-  --color-nav-link:       #0F7840;
+  --color-primary: #300033;
+  --color-accent: #F28924;
+  --color-nav-link: #0F7840;
   --color-nav-link-hover: #0a5c30;
-  --color-accent-hover:   #d4771e;
-  --color-bg:             #ffffff;
-  --color-text:           #300033;
-  --color-text-soft:      #6b5c6e;
+  --color-accent-hover: #d4771e;
+  --color-bg: #ffffff;
+  --color-text: #300033;
+  --color-text-soft: #6b5c6e;
 
 
- --color-surface:      #ffffff;   /* cards, footer, formulario de contacto */
-  --color-section-alt:  #f0ecf0;   /* fondo lavanda: sección Contacto + hover del navbar */
-  --color-services-bg:  #F5941F;   /* fondo de la sección Servicios */
-  --color-refugio-bg:   #fdf2f4;   /* fondo de la sección Refugio */
-  --color-highlight-bg: #F28924;   /* fondo de la sección Convivencia (hoy usa var(--color-accent) directo, lo separamos) */
+  --color-surface: #ffffff;
+  --color-section-alt: #f0ecf0;
+  --color-services-bg: #F5941F;
+  --color-refugio-bg: #fdf2f4;
+  --color-highlight-bg: #F28924;
 }
 
 body.high-contrast {
-  --color-primary:        #ffffff;
-  --color-accent:         #ffff00;
-  --color-nav-link:       #ffff00;
+  --color-primary: #ffffff;
+  --color-accent: #ffff00;
+  --color-nav-link: #ffff00;
   --color-nav-link-hover: #ffffff;
-  --color-accent-hover:   #ffffff;
-  --color-bg:             #000000;
-  --color-text:           #ffffff;
-  --color-text-soft:      #ffffff;
-  --color-surface:        #000000;
-  --color-section-alt:    #000000;
-  --color-services-bg:    #000000;
-  --color-refugio-bg:     #000000;
-  --color-highlight-bg:   #000000;
+  --color-accent-hover: #ffffff;
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-text-soft: #ffffff;
+  --color-surface: #000000;
+  --color-section-alt: #000000;
+  --color-services-bg: #000000;
+  --color-refugio-bg: #000000;
+  --color-highlight-bg: #000000;
 }
 
 body.high-contrast *,
@@ -51,7 +51,14 @@ body.high-contrast .navbar__links .inicio:hover {
   color: #000000;
 }
 
-*, *::before, *::after {
+body.high-contrast .services__card-link {
+  background-color: #ffff00;
+  color: #1a1a1a;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
