@@ -51,11 +51,11 @@ function Services({ onVerRefugio }) {
               <p className="services__card-description">{service.description}</p>
               {service.onClick ? (
                 <button onClick={service.onClick} className="services__card-link">
-                  {service.linkText} →
+                  {service.linkText}
                 </button>
               ) : (
                 <a href={service.link} className="services__card-link">
-                  {service.linkText} →
+                  {service.linkText}
                 </a>
               )}
             </div>
