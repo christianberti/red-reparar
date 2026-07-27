@@ -1,6 +1,6 @@
 import '../../styles/RefugioHero.css'
 import { Home, CheckCircle2 } from 'lucide-react'
-import imgRefugio from '../../assets/refugio-illustration.png'
+import imgRefugio from '../../assets/refugio-foto.jpeg'
 
 const checklist = [
   'Apoyo psicológico individual y grupal',

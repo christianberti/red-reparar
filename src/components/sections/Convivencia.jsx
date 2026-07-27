@@ -1,6 +1,6 @@
 import '../../styles/Convivencia.css'
 import { Users, HeartHandshake, Stethoscope, GraduationCap } from 'lucide-react'
-import imgConvivencia from '../../assets/convivencia-illustration.png'
+import imgConvivencia from '../../assets/convivencia-foto.jpeg'
 
 const cards = [
   { id: 1, icon: Users, title: 'Vida en Comunidad', description: 'Las chicas conviven bajo el mismo techo las 24 horas, compartiendo la vivienda de manera comunitaria, como una verdadera familia.' },

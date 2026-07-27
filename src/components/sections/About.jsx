@@ -1,5 +1,5 @@
 import '../../styles/About.css'
-import imgAbout from '../../assets/img1.png'
+import imgAbout from '../../assets/certificados.jpeg'
 
 function About() {
   return (
