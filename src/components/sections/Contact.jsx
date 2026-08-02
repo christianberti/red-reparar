@@ -1,11 +1,32 @@
+import { useRef, useState } from 'react'
 import '../../styles/Contact.css'
 import { MapPin, Mail, Phone } from 'lucide-react'
 
-function Contact() {
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xykrveod'
 
-  const handleSubmit = (e) => {
+function Contact() {
+  const formRef = useRef()
+  const [status, setStatus] = useState('idle')
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    alert('¡Gracias por contactarnos! Pronto nos pondremos en contacto contigo.')
+    setStatus('sending')
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(formRef.current),
+        headers: { Accept: 'application/json' },
+      })
+      if (response.ok) {
+        setStatus('success')
+        formRef.current.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch (error) {
+      console.error(error)
+      setStatus('error')
+    }
   }
 
   return (
@@ -44,20 +65,33 @@ function Contact() {
           </ul>
         </div>
 
-        <form className="contact__form" onSubmit={handleSubmit}>
+        <form ref={formRef} className="contact__form" onSubmit={handleSubmit}>
           <div className="contact__field">
             <label htmlFor="nombre">NOMBRE COMPLETO</label>
-            <input type="text" id="nombre" placeholder="Tu nombre" />
+            <input type="text" id="nombre" name="name" placeholder="Tu nombre" required />
           </div>
           <div className="contact__field">
             <label htmlFor="email">CORREO ELECTRÓNICO</label>
-            <input type="email" id="email" placeholder="email@ejemplo.com" />
+            <input type="email" id="email" name="email" placeholder="email@ejemplo.com" required />
           </div>
           <div className="contact__field">
             <label htmlFor="mensaje">MENSAJE</label>
-            <textarea id="mensaje" placeholder="¿Cómo podemos ayudarte?" rows={5} />
+            <textarea id="mensaje" name="message" placeholder="¿Cómo podemos ayudarte?" rows={5} required />
           </div>
-          <button type="submit" className="contact__button">Enviar Mensaje</button>
+          <button type="submit" className="contact__button" disabled={status === 'sending'}>
+            {status === 'sending' ? 'Enviando...' : 'Enviar Mensaje'}
+          </button>
+
+          {status === 'success' && (
+            <p role="status" className="contact__form-message contact__form-message--success">
+              ¡Gracias por contactarnos! Pronto nos pondremos en contacto contigo.
+            </p>
+          )}
+          {status === 'error' && (
+            <p role="alert" className="contact__form-message contact__form-message--error">
+              Hubo un problema al enviar el mensaje. Por favor intentá de nuevo.
+            </p>
+          )}
         </form>
 
       </div>
