@@ -89,9 +89,16 @@
   background-color: var(--color-primary);
   color: var(--color-bg);
 }
+
 .navbar__contrast-toggle[aria-pressed="true"] {
   background-color: var(--color-primary);
   color: var(--color-bg);
+}
+
+body.high-contrast .navbar__logo img {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 4px;
 }
 
 @media (max-width: 768px) {
