@@ -1,5 +1,5 @@
 import "../styles/Navbar.css";
-import logo from "../assets/red-reparar-logo.png";
+import logo from "../assets/logo_red_reparar_nuevo.png";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
