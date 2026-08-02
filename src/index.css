@@ -7,6 +7,7 @@
   --color-bg: #ffffff;
   --color-text: #300033;
   --color-text-soft: #6b5c6e;
+  --color-accent-text: #B35900;
 
 
   --color-surface: #ffffff;
@@ -30,6 +31,7 @@ body.high-contrast {
   --color-services-bg: #000000;
   --color-refugio-bg: #000000;
   --color-highlight-bg: #000000;
+  --color-accent-text: #ffff00;   
 }
 
 body.high-contrast *,
@@ -78,4 +80,9 @@ body {
 img {
   max-width: 100%;
   display: block;
+}
+
+
+section[id] {
+  scroll-margin-top: 100px;
 }

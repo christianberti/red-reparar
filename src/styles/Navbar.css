@@ -70,6 +70,10 @@
   color: var(--color-primary);
 }
 
+.navbar__logo {
+  color: var(--color-accent-text);
+}
+
 
 .navbar__contrast-toggle {
   background-color: transparent;
@@ -93,6 +97,11 @@
 .navbar__contrast-toggle[aria-pressed="true"] {
   background-color: var(--color-primary);
   color: var(--color-bg);
+}
+
+.navbar__contrast-toggle:focus-visible {
+  outline: 3px solid var(--color-accent-text);
+  outline-offset: 3px;
 }
 
 body.high-contrast .navbar__logo img {

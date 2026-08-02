@@ -49,10 +49,6 @@ const Footer = () => {
 
       <div className="footer__bottom">
         <p>© 2026 Red Reparar · Casa Refugio Trans</p>
-        <div className="footer__legal">
-          <a href="#">Aviso Legal</a>
-          <a href="#">Privacidad</a>
-        </div>
       </div>
     </footer>
   );
