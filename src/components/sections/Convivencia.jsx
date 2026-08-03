@@ -25,7 +25,7 @@ function Convivencia() {
               const Icon = card.icon
               return (
                 <div key={card.id} className="convivencia__card">
-                  <Icon size={26} color="var(--color-accent)" />
+                  <Icon size={26} color="var(--color-accent-text)" />
                   <h3 className="convivencia__card-title">{card.title}</h3>
                   <p className="convivencia__card-description">{card.description}</p>
                 </div>

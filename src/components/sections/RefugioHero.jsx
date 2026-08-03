@@ -42,7 +42,7 @@ function RefugioHero() {
         </div>
 
         <div className="refugio-hero__image">
-          <img src={imgRefugio} alt="Ilustración Casa Refugio Red Reparar" />
+        <img src={imgRefugio} alt="Foto de la Casa Refugio Red Reparar" />
         </div>
       </div>
     </section>
