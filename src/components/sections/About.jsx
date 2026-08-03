@@ -7,7 +7,7 @@ function About() {
       <div className="about__container">
 
         <div className="about__image">
-          <img src={imgAbout} alt="Fundación Reparar" />
+          <img src={imgAbout} alt="Entrega de certificados a egresadas de los talleres de Red Reparar" />
         </div>
 
         <div className="about__content">
