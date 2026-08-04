@@ -143,3 +143,14 @@
   }
 }
 
+.contact__required {
+  color: var(--color-accent-text);
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+.contact__form-note {
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+  margin-bottom: 0.5rem;
+}
