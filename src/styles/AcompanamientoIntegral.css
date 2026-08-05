@@ -8,8 +8,7 @@
   align-items: flex-start;
 }
 
-.acompanamiento__image { flex: 1; }
-.acompanamiento__image img { width: 100%; border-radius: 16px; object-fit: cover; }
+
 .acompanamiento__content { flex: 1.2; }
 
 .acompanamiento__title { font-size: 1.75rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.75rem; }
