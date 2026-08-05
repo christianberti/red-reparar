@@ -34,7 +34,7 @@
 }
 
 .navbar__links .inicio {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 .navbar__links a:hover {
